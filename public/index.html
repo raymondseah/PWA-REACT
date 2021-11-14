@@ -16,5 +16,14 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      // check if service work can work in current browser
+      // serviceWorker is just a JS file that run all the time. can be for push notifications or offline notifications
+      if('serviceWorker' in navigator){
+        window.addEventListener('load', ()=> {
+          navigator.serviceWorker.register();
+        })
+      }
+    </script>
   </body>
 </html>
